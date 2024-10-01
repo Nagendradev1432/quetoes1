@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       button{
+        margin-left: 500px;
+        margin-top: 120px;
+        height: 70px;
+        width: 140px;
+        border-radius: 40px;
+        box-shadow: 0px 0px 0px 5px ;
+        font-size: 18px;
+       }
+       div{
+        text-align: center;
+        margin-top: 30px;
+       }
+    </style>
+</head>
+
+<body>
+    <button id="btn1" onclick="go(),bgc()">click a button</button>
+    <div id="div1"></div>
+    <script>
+        let arr1=[ "Give someone a program; you frustrate them for a day; teach them how to program, and you frustrate them for a lifetime",
+            "Don’t comment bad code rewrite it"," No one in the brief history of computing has ever written a piece of perfect software. Its unlikely that youll be the first",
+            " A programming language is for thinking about programs, not for expressing programs youve already thought of. It should be a pencil, not a pen",
+            " Debugging becomes significantly easier if you first admit that you are the problem"," Its better to wait for a productive programmer to become available than it is to wait for the first available programmer to become productive",
+            "Any fool can write code that a computer can understand. Good programmers write code that humans can understand ",
+            " One of my most productive days was throwing away 1000 lines of code "," Everyday life is like programming, I guess. If you love something, you can put beauty into it",
+            "System programmers are the high priests of a low cult"," I don’t care if it works on your machine! We are not shipping your machine",
+            "Fix the cause, not the symptom"," Measuring programming progress by lines of code is like measuring aircraft building progress by weight",
+            "In programming, the hard part isn’t solving problems but deciding what problems to solve ",
+            " If debudding is the process of removing software bugs, then programming must be the process of putting them in",
+            " First, solve the problem. Then write the code"
+        ]
+
+        function go(){
+           
+            for( i of arr1){
+                var str1=arr1[Math.floor(Math.random()*arr1.length)]
+
+            }
+            let div1=document.getElementById("div1")
+            div1.innerHTML=str1
+            div1.style.fontSize="36px"
+        }
+
+        function color(){
+            let str1="0123456789ABCDEF"
+            let str2="#"
+            for(i=1;i<=6;i++){
+            str2+=str1[Math.floor(Math.random()*str1.length)]
+        
+        }
+        return str2
+        }
+        function bgc(){
+            document.body.style.backgroundColor=color()
+        }
+
+    </script>
+</body>
+</html>
